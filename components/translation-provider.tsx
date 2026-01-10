@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import Cookies from 'js-cookie';
 
-type Language = 'en' | 'pt' | 'es' | 'fr';
+type Language = 'en' | 'pt' | 'es' | 'fr' | 'it';
 
 interface TranslationContextType {
   language: Language;
