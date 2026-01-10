@@ -8,7 +8,7 @@ type ClerkProviderProps = React.ComponentProps<typeof ClerkNextJSProvider>;
 
 export function ClerkProvider({ children, appearance, ...props }: ClerkProviderProps) {
   const langKey = typeof window !== 'undefined' ? localStorage.getItem('clerk-language') || 'enUS' : 'enUS';
-  const locs = { enUS, ptBR, esES, frFR };
+  const locs = { enUS, ptBR, esES, frFR, itIT };
   const baseLoc = locs[langKey as keyof typeof locs];
   // Custom overrides for untranslated strings
   const localization = langKey === 'ptBR' && baseLoc.signUp

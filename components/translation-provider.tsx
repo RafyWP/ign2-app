@@ -98,6 +98,27 @@ const translations: Record<Language, Record<string, string>> = {
     'signup.matchBrand': 'Correspond à votre marque',
     'signup.matchBrandDesc': 'Thématisez nos composants pré-construits ou intégrez-vous avec nos APIs faciles à utiliser.',
   },
+  it: {
+    'header.title': 'App IGN2',
+    'header.signIn': 'Accedi',
+    'header.signUp': 'Registrati',
+    'home.title': 'Per iniziare, modifica il file page.tsx.',
+    'home.description': 'Cerchi un punto di partenza o più istruzioni? Vai a',
+    'home.templates': 'Modelli',
+    'home.or': 'o il',
+    'home.learning': 'Centro di apprendimento',
+    'home.center': '.',
+    'home.deploy': 'Distribuisci Ora',
+    'home.docs': 'Documentazione',
+    'signup.saveTime': 'Risparmia tempo di sviluppo',
+    'signup.saveTimeDesc': 'Aggiungi autenticazione e gestione utenti alla tua app con solo poche righe di codice.',
+    'signup.increaseEngagement': 'Aumenta l\'engagement',
+    'signup.increaseEngagementDesc': 'Aggiungi interfacce intuitive progettate per ridurre l\'attrito per i tuoi utenti.',
+    'signup.protectUsers': 'Proteggi i tuoi utenti',
+    'signup.protectUsersDesc': 'Abilita funzionalità come la verifica in due passaggi e goditi aggiornamenti automatici di sicurezza.',
+    'signup.matchBrand': 'Abbina alla tua marca',
+    'signup.matchBrandDesc': 'Tema i nostri componenti pre-costruiti o integrati con le nostre API facili da usare.',
+  },
 };
 
 export function TranslationProvider({ children, initialLanguage = 'en' }: { children: ReactNode; initialLanguage?: Language }) {
