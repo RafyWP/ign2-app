@@ -1,0 +1,21 @@
+{
+  "header.title": "App IGN2",
+  "header.signIn": "Iniciar sesión",
+  "header.signUp": "Registrarse",
+  "home.title": "Kit de inicio SaaS para lanzar MVP seguros",
+  "home.description": "¿Buscando un punto de partida o más instrucciones? Dirígete a",
+  "home.templates": "Plantillas",
+  "home.or": "o el",
+  "home.learning": "Centro de Aprendizaje",
+  "home.center": ".",
+  "home.deploy": "Desplegar Ahora",
+  "home.docs": "Documentación",
+  "signup.saveTime": "Ahorra tiempo de desarrollo",
+  "signup.saveTimeDesc": "Agrega autenticación y gestión de usuarios a tu app con solo unas pocas líneas de código.",
+  "signup.increaseEngagement": "Aumenta el compromiso",
+  "signup.increaseEngagementDesc": "Agrega interfaces intuitivas diseñadas para reducir la fricción para tus usuarios.",
+  "signup.protectUsers": "Protege a tus usuarios",
+  "signup.protectUsersDesc": "Habilita funciones como verificación de dos pasos y disfruta de actualizaciones automáticas de seguridad.",
+  "signup.matchBrand": "Coincide con tu marca",
+  "signup.matchBrandDesc": "Tema nuestros componentes preconstruidos o intégrate con nuestras APIs fáciles de usar."
+}
