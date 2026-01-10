@@ -6,7 +6,7 @@ describe('useValidation', () => {
   it('validates successfully and clears errors', () => {
     const { result } = renderHook(() => useValidation(userSchema))
     const validData = { name: 'Test', email: 'test@example.com', password: 'password123' }
-    let isValid: boolean
+    let isValid = false
     act(() => {
       isValid = result.current.validate(validData)
     })
@@ -17,7 +17,7 @@ describe('useValidation', () => {
   it('sets errors on invalid data', () => {
     const { result } = renderHook(() => useValidation(userSchema))
     const invalidData = { name: '', email: 'invalid', password: '123' }
-    let isValid: boolean
+    let isValid = true
     act(() => {
       isValid = result.current.validate(invalidData)
     })

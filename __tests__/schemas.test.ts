@@ -11,14 +11,18 @@ describe('userSchema', () => {
     const invalidData = { name: 'John', email: 'invalid', password: 'password123' }
     const result = userSchema.safeParse(invalidData)
     expect(result.success).toBe(false)
-    expect(result.error.issues[0].message).toBe('Invalid email format')
+    if (!result.success) {
+      expect(result.error.issues[0].message).toBe('Invalid email format')
+    }
   })
 
   it('rejects short password', () => {
     const invalidData = { name: 'John', email: 'john@example.com', password: '123' }
     const result = userSchema.safeParse(invalidData)
     expect(result.success).toBe(false)
-    expect(result.error.issues[0].message).toBe('Password must be at least 8 characters')
+    if (!result.success) {
+      expect(result.error.issues[0].message).toBe('Password must be at least 8 characters')
+    }
   })
 })
 
