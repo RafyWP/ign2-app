@@ -37,8 +37,8 @@ export function LanguageSelector() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>
         {languages.map((lang) => (
-          <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.key)}>
-            <span className='text-lg mr-2'>{lang.flag}</span>
+          <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.key)} className='py-1'>
+            <span className='text-base mr-2'>{lang.flag}</span>
             {lang.name}
           </DropdownMenuItem>
         ))}
