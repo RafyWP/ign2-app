@@ -7,12 +7,12 @@ import { useEffect, useState } from 'react';
 type ClerkProviderProps = React.ComponentProps<typeof ClerkNextJSProvider>;
 
 export function ClerkProvider({ children, appearance, ...props }: ClerkProviderProps) {
-  const [localization, setLocalization] = useState<any>(null);
+  const [localization, setLocalization] = useState<Record<string, unknown> | null>(null);
 
   useEffect(() => {
     const langKey = localStorage.getItem('clerk-language') || 'enUS';
     import('@clerk/localizations').then((localizations) => {
-      const loc = (localizations as any)[langKey];
+      const loc = (localizations as Record<string, Record<string, unknown>>)[langKey];
       setLocalization(loc);
     });
   }, []);
