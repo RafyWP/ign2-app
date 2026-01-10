@@ -2,7 +2,7 @@
 
 import { ClerkProvider as ClerkNextJSProvider } from '@clerk/nextjs';
 import { shadcn } from '@clerk/themes';
-// @ts-expect-error
+// @ts-expect-error Clerk localizations import works in runtime
 import { enUS, ptBR, esES, frFR } from '@clerk/localizations';
 
 type ClerkProviderProps = React.ComponentProps<typeof ClerkNextJSProvider>;
