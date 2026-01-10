@@ -3,6 +3,7 @@ import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from '@cl
 import { Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { ThemeToggle } from './theme-toggle';
+import { LanguageSelector } from './language-selector';
 
 export function Header() {
   return (
@@ -16,6 +17,7 @@ export function Header() {
       </Link>
        <div className='flex items-center gap-x-4'>
          <ThemeToggle />
+         <LanguageSelector />
          <SignedOut>
            <SignInButton>
              <Button variant='ghost'>Sign in</Button>
