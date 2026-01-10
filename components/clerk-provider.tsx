@@ -2,7 +2,7 @@
 
 import { ClerkProvider as ClerkNextJSProvider } from '@clerk/nextjs';
 import { shadcn } from '@clerk/themes';
-// @ts-ignore
+// @ts-expect-error
 import { enUS, ptBR, esES, frFR } from '@clerk/localizations';
 
 type ClerkProviderProps = React.ComponentProps<typeof ClerkNextJSProvider>;
