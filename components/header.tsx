@@ -4,8 +4,11 @@ import { Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { ThemeToggle } from './theme-toggle';
 import { LanguageSelector } from './language-selector';
+import { useTranslation } from './translation-provider';
 
 export function Header() {
+  const { t } = useTranslation();
+
   return (
     <header className='flex h-16 items-center justify-between gap-4 border-b px-4'>
       <Link
@@ -13,23 +16,23 @@ export function Header() {
         className='flex items-center gap-x-4'
       >
         <Rocket />
-        <span className='font-semibold'>ign2 App</span>
+        <span className='font-semibold'>{t('header.title')}</span>
       </Link>
-       <div className='flex items-center gap-x-4'>
-         <ThemeToggle />
-         <LanguageSelector />
-         <SignedOut>
-           <SignInButton>
-             <Button variant='ghost'>Sign in</Button>
-           </SignInButton>
-           <SignUpButton>
-             <Button>Sign up</Button>
-           </SignUpButton>
-         </SignedOut>
-         <SignedIn>
-           <UserButton />
-         </SignedIn>
-       </div>
+      <div className='flex items-center gap-x-4'>
+        <ThemeToggle />
+        <LanguageSelector />
+        <SignedOut>
+          <SignInButton>
+            <Button variant='ghost'>{t('header.signIn')}</Button>
+          </SignInButton>
+          <SignUpButton>
+            <Button>{t('header.signUp')}</Button>
+          </SignUpButton>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+      </div>
     </header>
   );
 }

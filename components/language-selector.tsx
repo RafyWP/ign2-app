@@ -10,15 +10,16 @@ import {
 } from '@/components/ui/dropdown-menu';
 
 const languages = [
-  { code: 'en-US', name: 'English', key: 'enUS' },
-  { code: 'pt-BR', name: 'Português', key: 'ptBR' },
-  { code: 'es-ES', name: 'Español', key: 'esES' },
-  { code: 'fr-FR', name: 'Français', key: 'frFR' },
+  { code: 'en', name: 'English', key: 'en' },
+  { code: 'pt', name: 'Português', key: 'pt' },
+  { code: 'es', name: 'Español', key: 'es' },
+  { code: 'fr', name: 'Français', key: 'fr' },
 ];
 
 export function LanguageSelector() {
   const setLanguage = (langKey: string) => {
-    localStorage.setItem('clerk-language', langKey);
+    localStorage.setItem('app-language', langKey);
+    localStorage.setItem('clerk-language', langKey === 'pt' ? 'ptBR' : langKey === 'es' ? 'esES' : langKey === 'fr' ? 'frFR' : 'enUS');
     window.location.reload(); // Reload to apply new localization
   };
 
