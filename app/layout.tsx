@@ -22,12 +22,12 @@ export const metadata: Metadata = {
   description: 'SaaS Starter Kit built with Next.js, Clerk, and Tailwind CSS',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const lang = (cookieStore.get('app-language')?.value as 'en' | 'pt' | 'es' | 'fr') || 'en';
 
   return (
