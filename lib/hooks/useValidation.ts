@@ -9,9 +9,9 @@ export function useValidation<T>(schema: z.ZodSchema<T>) {
     const result = schema.safeParse(data);
     if (!result.success) {
       const newErrors: Partial<Record<keyof T, string>> = {};
-      result.error.errors.forEach((err) => {
-        const field = err.path[0] as keyof T;
-        newErrors[field] = err.message;
+      result.error.issues.forEach((issue) => {
+        const field = issue.path[0] as keyof T;
+        newErrors[field] = issue.message;
       });
       setErrors(newErrors);
       return false;
