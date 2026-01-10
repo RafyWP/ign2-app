@@ -68,16 +68,8 @@ const translations: Record<Language, Record<string, string>> = {
   },
 };
 
-export function TranslationProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(() => {
-    if (typeof window !== 'undefined') {
-      const stored = Cookies.get('app-language') as Language;
-      if (stored && stored in translations) {
-        return stored;
-      }
-    }
-    return 'en';
-  });
+export function TranslationProvider({ children, initialLanguage = 'en' }: { children: ReactNode; initialLanguage?: Language }) {
+  const [language, setLanguageState] = useState<Language>(initialLanguage);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
