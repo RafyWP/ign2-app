@@ -11,7 +11,7 @@ export function ClerkProvider({ children, appearance, ...props }: ClerkProviderP
   const locs = { enUS, ptBR, esES, frFR };
   const baseLoc = locs[langKey as keyof typeof locs];
   // Custom overrides for untranslated strings
-  const localization = langKey === 'ptBR'
+  const localization = langKey === 'ptBR' && baseLoc.signUp
     ? { ...baseLoc, signUp: { ...baseLoc.signUp, start: { ...baseLoc.signUp.start, title: 'Criar Conta' } } }
     : baseLoc;
 
