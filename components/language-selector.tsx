@@ -1,6 +1,5 @@
 'use client';
 
-import { Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
@@ -9,15 +8,19 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import Cookies from 'js-cookie';
+import { useTranslation } from './translation-provider';
 
 const languages = [
-  { code: 'en', name: 'English', key: 'en' },
-  { code: 'pt', name: 'Português', key: 'pt' },
-  { code: 'es', name: 'Español', key: 'es' },
-  { code: 'fr', name: 'Français', key: 'fr' },
+  { code: 'en', name: 'English', flag: '🇺🇸', key: 'en' },
+  { code: 'pt', name: 'Português', flag: '🇧🇷', key: 'pt' },
+  { code: 'es', name: 'Español', flag: '🇪🇸', key: 'es' },
+  { code: 'fr', name: 'Français', flag: '🇫🇷', key: 'fr' },
 ];
 
 export function LanguageSelector() {
+  const { language } = useTranslation();
+  const currentLang = languages.find(lang => lang.key === language) || languages[0];
+
   const setLanguage = (langKey: string) => {
     Cookies.set('app-language', langKey, { expires: 365 });
     localStorage.setItem('clerk-language', langKey === 'pt' ? 'ptBR' : langKey === 'es' ? 'esES' : langKey === 'fr' ? 'frFR' : 'enUS');
@@ -28,13 +31,14 @@ export function LanguageSelector() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant='outline' size='icon' suppressHydrationWarning>
-          <Globe className='h-[1.2rem] w-[1.2rem]' />
+          <span className='text-lg'>{currentLang.flag}</span>
           <span className='sr-only'>Select language</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end'>
         {languages.map((lang) => (
           <DropdownMenuItem key={lang.code} onClick={() => setLanguage(lang.key)}>
+            <span className='text-lg mr-2'>{lang.flag}</span>
             {lang.name}
           </DropdownMenuItem>
         ))}
