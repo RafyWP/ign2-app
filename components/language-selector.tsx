@@ -24,7 +24,7 @@ export function LanguageSelector() {
 
   const setLanguage = (langKey: string) => {
     Cookies.set('app-language', langKey, { expires: 365 });
-    localStorage.setItem('clerk-language', langKey === 'pt' ? 'ptBR' : langKey === 'es' ? 'esES' : langKey === 'fr' ? 'frFR' : langKey === 'it' ? 'itIT' : 'enUS');
+    localStorage.setItem('clerk-language', langKey === 'pt' ? 'ptBR' : langKey === 'es' ? 'esES' : langKey === 'fr' ? 'frFR' : 'enUS');
     window.location.reload(); // Reload to apply new localization
   };
 
