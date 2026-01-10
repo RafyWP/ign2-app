@@ -8,6 +8,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import Cookies from 'js-cookie';
 
 const languages = [
   { code: 'en', name: 'English', key: 'en' },
@@ -18,7 +19,7 @@ const languages = [
 
 export function LanguageSelector() {
   const setLanguage = (langKey: string) => {
-    localStorage.setItem('app-language', langKey);
+    Cookies.set('app-language', langKey, { expires: 365 });
     localStorage.setItem('clerk-language', langKey === 'pt' ? 'ptBR' : langKey === 'es' ? 'esES' : langKey === 'fr' ? 'frFR' : 'enUS');
     window.location.reload(); // Reload to apply new localization
   };
