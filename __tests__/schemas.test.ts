@@ -23,7 +23,7 @@ describe('userSchema', () => {
 })
 
 describe('validateUser', () => {
-  it('returns success for valid data', () => {
+  it('returns true for valid data', () => {
     const validData = { name: 'Jane', email: 'jane@example.com', password: 'password123' }
     expect(validateUser(validData)).toBe(true)
   })

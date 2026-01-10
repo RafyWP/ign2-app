@@ -8,6 +8,6 @@ export const userSchema = z.object({
 });
 
 // Utility function to validate data
-export function validateUser(data: unknown) {
-  return userSchema.safeParse(data);
+export function validateUser(data: unknown): boolean {
+  return userSchema.safeParse(data).success;
 }
