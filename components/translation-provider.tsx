@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import Cookies from 'js-cookie';
 
 type Language = 'en' | 'pt' | 'es' | 'fr';
 
@@ -70,7 +71,7 @@ const translations: Record<Language, Record<string, string>> = {
 export function TranslationProvider({ children }: { children: ReactNode }) {
   const [language, setLanguageState] = useState<Language>(() => {
     if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('app-language') as Language;
+      const stored = Cookies.get('app-language') as Language;
       if (stored && stored in translations) {
         return stored;
       }
@@ -80,9 +81,9 @@ export function TranslationProvider({ children }: { children: ReactNode }) {
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
-    localStorage.setItem('app-language', lang);
+    Cookies.set('app-language', lang, { expires: 365 });
     localStorage.setItem('clerk-language', lang === 'pt' ? 'ptBR' : lang === 'es' ? 'esES' : lang === 'fr' ? 'frFR' : 'enUS');
-    window.location.reload();
+    window.location.reload(); // Reload to apply new localization
   };
 
   const t = (key: string): string => {
