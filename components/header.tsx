@@ -1,8 +1,9 @@
 import { Button } from '@/components/ui/button';
-import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton, LanguageSelector } from '@clerk/nextjs';
+import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
 import { Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { ThemeToggle } from './theme-toggle';
+import { LanguageSelector } from './language-selector';
 
 export function Header() {
   return (
