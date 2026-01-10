@@ -13,21 +13,7 @@ export default function Home() {
             {t('home.title')}
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            {t('home.description')}{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              {t('home.templates')}
-            </a>{" "}
-            {t('home.or')}{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              {t('home.learning')}
-            </a>{" "}
-            {t('home.center')}
+            {t('home.description')}
           </p>
         </div>
         <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
