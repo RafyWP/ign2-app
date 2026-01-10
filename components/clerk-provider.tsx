@@ -2,19 +2,20 @@
 
 import { ClerkProvider as ClerkNextJSProvider } from '@clerk/nextjs';
 import { shadcn } from '@clerk/themes';
+import { enUS, ptBR, esES, frFR } from '@clerk/localizations';
 import { useEffect, useState } from 'react';
+import type { LocalizationResource } from '@clerk/types';
 
 type ClerkProviderProps = React.ComponentProps<typeof ClerkNextJSProvider>;
 
 export function ClerkProvider({ children, appearance, ...props }: ClerkProviderProps) {
-  const [localization, setLocalization] = useState<Record<string, unknown> | null>(null);
+  const [localization, setLocalization] = useState<LocalizationResource | undefined>(undefined);
 
   useEffect(() => {
     const langKey = localStorage.getItem('clerk-language') || 'enUS';
-    import('@clerk/localizations').then((localizations) => {
-      const loc = (localizations as Record<string, Record<string, unknown>>)[langKey];
-      setLocalization(loc);
-    });
+    const locs = { enUS, ptBR, esES, frFR };
+    const loc = locs[langKey as keyof typeof locs];
+    setLocalization(loc);
   }, []);
 
   return (
