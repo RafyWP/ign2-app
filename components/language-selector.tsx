@@ -16,6 +16,7 @@ const languages = [
   { code: 'es', name: 'Español', flag: '🇪🇸', key: 'es' },
   { code: 'fr', name: 'Français', flag: '🇫🇷', key: 'fr' },
   { code: 'it', name: 'Italiano', flag: '🇮🇹', key: 'it' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺', key: 'ru' },
 ];
 
 export function LanguageSelector() {
@@ -24,7 +25,7 @@ export function LanguageSelector() {
 
   const setLanguage = (langKey: string) => {
     Cookies.set('app-language', langKey, { expires: 365 });
-    localStorage.setItem('clerk-language', langKey === 'pt' ? 'ptBR' : langKey === 'es' ? 'esES' : langKey === 'fr' ? 'frFR' : 'enUS');
+    localStorage.setItem('clerk-language', langKey === 'pt' ? 'ptBR' : langKey === 'es' ? 'esES' : langKey === 'fr' ? 'frFR' : langKey === 'ru' ? 'ruRU' : 'enUS');
     window.location.reload(); // Reload to apply new localization
   };
 

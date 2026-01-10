@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import Cookies from 'js-cookie';
 
-type Language = 'en' | 'pt' | 'es' | 'fr' | 'it';
+type Language = 'en' | 'pt' | 'es' | 'fr' | 'it' | 'ru';
 
 interface TranslationContextType {
   language: Language;
@@ -118,6 +118,27 @@ const translations: Record<Language, Record<string, string>> = {
     'signup.protectUsersDesc': 'Abilita funzionalità come la verifica in due passaggi e goditi aggiornamenti automatici di sicurezza.',
     'signup.matchBrand': 'Abbina alla tua marca',
     'signup.matchBrandDesc': 'Tema i nostri componenti pre-costruiti o integrati con le nostre API facili da usare.',
+  },
+  ru: {
+    'header.title': 'Приложение IGN2',
+    'header.signIn': 'Войти',
+    'header.signUp': 'Регистрация',
+    'home.title': 'Чтобы начать, измените файл page.tsx.',
+    'home.description': 'Ищете отправную точку или больше инструкций? Перейдите к',
+    'home.templates': 'Шаблоны',
+    'home.or': 'или',
+    'home.learning': 'Центр обучения',
+    'home.center': '.',
+    'home.deploy': 'Развернуть сейчас',
+    'home.docs': 'Документация',
+    'signup.saveTime': 'Экономьте время разработки',
+    'signup.saveTimeDesc': 'Добавьте аутентификацию и управление пользователями в свое приложение всего за несколько строк кода.',
+    'signup.increaseEngagement': 'Увеличьте вовлеченность',
+    'signup.increaseEngagementDesc': 'Добавьте интуитивные интерфейсы, разработанные для снижения трения для ваших пользователей.',
+    'signup.protectUsers': 'Защитите своих пользователей',
+    'signup.protectUsersDesc': 'Включите функции, такие как двухэтапная проверка, и наслаждайтесь автоматическими обновлениями безопасности.',
+    'signup.matchBrand': 'Соответствует вашему бренду',
+    'signup.matchBrandDesc': 'Тема наших предварительно созданных компонентов или интеграция с нашими простыми в использовании API.',
   },
 };
 
