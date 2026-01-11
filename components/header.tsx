@@ -2,11 +2,11 @@
 
 import { Button } from '@/components/ui/button';
 import { SignInButton, SignUpButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs';
-import { Rocket } from 'lucide-react';
 import Link from 'next/link';
 import { ThemeToggle } from './theme-toggle';
 import { LanguageSelector } from './language-selector';
 import { useTranslation } from './translation-provider';
+import Image from "next/image";
 
 export function Header() {
   const { t } = useTranslation();
@@ -17,7 +17,13 @@ export function Header() {
         href='/'
         className='flex items-center gap-x-4'
       >
-        <Rocket />
+        <Image
+          className=""
+          src="/ign2-app.png"
+          alt="ign2 App logomark"
+          width={24}
+          height={24}
+        />
         <span className='font-semibold'>{t('header.title')}</span>
       </Link>
        <div className='flex items-center gap-x-2'>

@@ -9,7 +9,7 @@ export default function Home() {
     <div className="flex items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex w-full max-w-3xl flex-col items-center justify-between gap-6 py-32 px-16 bg-white dark:bg-black sm:items-start">
         <div className="w-full flex flex-col items-center gap-6 text-center">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm">
             {t('home.eyebrow')}
           </p>
           <h1 className="w-full text-4xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
@@ -34,6 +34,25 @@ export default function Home() {
             {t('home.deploy')}
           </a>
         </div>
+        <section className="w-full flex gap-6 mt-6">
+          <p className="flex-1 text-zinc-600 dark:text-zinc-400">
+            {t('home.newText')}
+          </p>
+          <Image
+            className="dark:invert"
+            src="/clerk-mono-full.svg"
+            alt="Clerk logomark"
+            width={69}
+            height={20}
+          />
+          <Image
+            className="dark:invert"
+            src="/vercel-logotype-light.svg"
+            alt="Vercel logomark"
+            width={80}
+            height={16}
+          />
+        </section>
         <section className="w-full flex flex-col gap-4 mt-8">
           <h2 className="text-2xl font-semibold text-black dark:text-zinc-50">{t('home.features.auth')}</h2>
           <h2 className="text-2xl font-semibold text-black dark:text-zinc-50">{t('home.features.subscriptions')}</h2>
