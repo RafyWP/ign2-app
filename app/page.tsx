@@ -19,9 +19,7 @@ export default function Home() {
         <div className="w-full flex flex-col gap-4 text-base font-medium justify-center sm:flex-row">
           <a
             className="flex h-12 items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:min-w-[200px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/dashboard"
           >
             <Image
               className="dark:invert"
