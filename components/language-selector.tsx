@@ -32,7 +32,7 @@ export function LanguageSelector() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant='outline' size='icon' suppressHydrationWarning>
+        <Button variant='outline' size='icon-sm' suppressHydrationWarning>
           <span className='text-lg'>{currentLang.flag}</span>
           <span className='sr-only'>Select language</span>
         </Button>

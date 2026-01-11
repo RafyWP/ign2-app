@@ -20,16 +20,16 @@ export function Header() {
         <Rocket />
         <span className='font-semibold'>{t('header.title')}</span>
       </Link>
-      <div className='flex items-center gap-x-4'>
+       <div className='flex items-center gap-x-2'>
         <ThemeToggle />
         <LanguageSelector />
         <SignedOut>
-          <SignInButton>
-            <Button variant='ghost'>{t('header.signIn')}</Button>
-          </SignInButton>
-          <SignUpButton>
-            <Button>{t('header.signUp')}</Button>
-          </SignUpButton>
+           <SignInButton>
+             <Button variant='ghost' size='sm'>{t('header.signIn')}</Button>
+           </SignInButton>
+           <SignUpButton>
+             <Button size='sm'>{t('header.signUp')}</Button>
+           </SignUpButton>
         </SignedOut>
         <SignedIn>
           <UserButton />
