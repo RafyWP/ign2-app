@@ -34,6 +34,11 @@ export default function Home() {
             {t('home.deploy')}
           </a>
         </div>
+        <section className="w-full flex flex-col gap-4 mt-8">
+          <h2 className="text-2xl font-semibold text-black dark:text-zinc-50">{t('home.features.auth')}</h2>
+          <h2 className="text-2xl font-semibold text-black dark:text-zinc-50">{t('home.features.subscriptions')}</h2>
+          <h2 className="text-2xl font-semibold text-black dark:text-zinc-50">{t('home.features.hosting')}</h2>
+        </section>
       </main>
     </div>
   );
