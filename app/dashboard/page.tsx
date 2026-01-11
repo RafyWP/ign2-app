@@ -1,3 +1,5 @@
+'use client';
+
 import { SignedIn, SignedOut, SignInButton } from '@clerk/nextjs';
 import { useTranslation } from '@/components/translation-provider';
 
