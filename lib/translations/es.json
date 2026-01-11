@@ -13,5 +13,7 @@
   "signup.protectUsers": "Protege a tus usuarios",
   "signup.protectUsersDesc": "Habilita funciones como verificación de dos pasos y disfruta de actualizaciones automáticas de seguridad.",
   "signup.matchBrand": "Coincide con tu marca",
-  "signup.matchBrandDesc": "Tema nuestros componentes preconstruidos o intégrate con nuestras APIs fáciles de usar."
+  "signup.matchBrandDesc": "Tema nuestros componentes preconstruidos o intégrate con nuestras APIs fáciles de usar.",
+  "dashboard.title": "Panel de control",
+  "dashboard.signInRequired": "Necesitas iniciar sesión para acceder al panel"
 }

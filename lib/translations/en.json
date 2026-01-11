@@ -13,5 +13,7 @@
   "signup.protectUsers": "Protect your users",
   "signup.protectUsersDesc": "Enable features like two-step verification and enjoy automatic security updates.",
   "signup.matchBrand": "Match your brand",
-  "signup.matchBrandDesc": "Theme our pre-built components, or integrate with our easy-to-use APIs."
+  "signup.matchBrandDesc": "Theme our pre-built components, or integrate with our easy-to-use APIs.",
+  "dashboard.title": "Dashboard",
+  "dashboard.signInRequired": "You need to sign in to access the dashboard"
 }

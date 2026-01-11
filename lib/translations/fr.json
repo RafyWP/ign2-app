@@ -13,5 +13,7 @@
   "signup.protectUsers": "Protégez vos utilisateurs",
   "signup.protectUsersDesc": "Activez des fonctionnalités comme la vérification en deux étapes et profitez des mises à jour automatiques de sécurité.",
   "signup.matchBrand": "Correspond à votre marque",
-  "signup.matchBrandDesc": "Thématisez nos composants pré-construits ou intégrez-vous avec nos APIs faciles à utiliser."
+  "signup.matchBrandDesc": "Thématisez nos composants pré-construits ou intégrez-vous avec nos APIs faciles à utiliser.",
+  "dashboard.title": "Tableau de bord",
+  "dashboard.signInRequired": "Vous devez vous connecter pour accéder au tableau de bord"
 }
